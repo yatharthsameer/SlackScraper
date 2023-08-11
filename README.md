@@ -2,15 +2,32 @@
 
 ## Usage
 
-Add your [slack token](https://api.slack.com/docs/oauth-test-tokens) credentials to `env.json` in project root
+Add your [slack token](https://api.slack.com/docs/oauth-test-tokens) credentials to `getMemberInfo.py` in project and the project root under env.json
 
 eg:
 
+```js
+  sc = WebClient(
+        token="xoxb-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+
+```
+env.json
 ```js
 {
   "token": "xxxxxx-XXXXXXXX-XXXXXXXX-xxxxxxxx"
 }
 ```
+
+## Get all info on the users in the slack workspace
+
+`python getMemberInfo.py`
+
+the following info will be extracted and saved to a csv
+Real Name	|   Email	|  Phone	|   Channels
+
+
+
+These are additional functionalities:
 
 ## slackscrape
 
