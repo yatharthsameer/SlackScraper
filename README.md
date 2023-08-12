@@ -1,4 +1,9 @@
 # slackscrape
+Tutorial to get your API token:
+
+https://www.loom.com/share/e155a004f0ef49a2bc2dd7348a06036d
+
+
 
 ## Usage
 
