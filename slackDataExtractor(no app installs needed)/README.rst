@@ -1,6 +1,39 @@
 ============
-Slack Dumper
+Slack Data Extractor
 ============
+
+
+To run:
+
+1. Extract Data:
+
+`` ./slackdump``
+
+2. Parse data:
+
+`` python parse.py ``
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,12 +92,6 @@ mode.
     executable, choose Run.
 
 
-Slackord2: Migrating to Discord
-===============================
-
-If you're migrating to Discord, the recommended way is to use Slackord2_ - a
-great tool with a nice GUI, that is compatible with the export files generated
-by Slackdump.
 
 User Guide
 ==========
