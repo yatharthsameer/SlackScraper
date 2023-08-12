@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     # Initialize Slack WebClient with your token
     sc = WebClient(
-        token="xoxb-2244896629957-5748342375344-Fz38oKXDaFHTXUChP8wmkUA9")
+        token="xoxb-ADD-YOUR-SLACK-BOT-API-TOKEN-HERE")
 
     # Retrieve user list
     response_users = sc.users_list()
