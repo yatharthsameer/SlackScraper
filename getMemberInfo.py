@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     # Initialize Slack WebClient with your token
     sc = WebClient(
-        token="xoxb-ADD-YOUR-SLACK-BOT-API-TOKEN-HERE")
+        token="xoxb-2244896629957-5748342375344-Fz38oKXDaFHTXUChP8wmkUA9")
 
     # Retrieve user list
     response_users = sc.users_list()
@@ -52,7 +52,9 @@ if __name__ == '__main__':
             if user:
                 user_details = {
                     'real_name': user['real_name'],
-                    'email': user['profile'].get('email', ''),  # Handle missing 'email' field
+                    'email': user['profile'].get('email', ''),
+                    'phone': user['profile'].get('phone', ''),
+                    'title': user['profile'].get('title', ''),  # Add title
                     # Add other user details you need
                 }
                 if member_id not in users_and_channels:
@@ -93,7 +95,7 @@ if __name__ == '__main__':
         csv_writer = csv.writer(csv_file)
     
         # Write the header row to the CSV file
-        csv_writer.writerow(["Real Name", "Email", "Phone", "Channels"])
+        csv_writer.writerow(["Real Name", "Email", "Phone", "Title", "Channels"])
     
         # Loop through each JSON file in the directory
         for filename in os.listdir(json_directory):
@@ -107,10 +109,11 @@ if __name__ == '__main__':
                     real_name = user_info.get("real_name", "")
                     email = user_info["profile"].get("email", "")
                     phone = user_info["profile"].get("phone", "")
+                    title = user_info["profile"].get("title", "")  # Extract title
                     channels = data.get("channels", [])
                 
                     # Write the extracted data to the CSV file
-                    csv_writer.writerow([real_name, email, phone, ",".join(channels)])
+                    csv_writer.writerow([real_name, email, phone, title, ",".join(channels)])
 
     print("Data extracted and saved to", csv_file_path)
 
